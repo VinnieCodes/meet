@@ -1,30 +1,10 @@
-User Stories
+# Meet App
 
-As a user,  
-I should be able to filter events by city  
-so that I can see a list of events taking place in that city.
+## Basic Information
+### README.md
 
-As a user,  
-I should be able to show/hide event details  
-so that I can see event details and hide them if I want.
+This project is a serverless, progressive web application (PWA) built with React using a test-driven development (TDD) approach. The application leverages the Google Calendar API to fetch upcoming events, allowing users to search for events by city and visualize event data through interactive charts. Key features include offline support, push notifications, responsive design, and cross-platform compatibility, ensuring a seamless and scalable user experience.
 
-As a user,  
-I should be able to specify number of events  
-so that the I can easily see the number of events.
-
-As a user,  
-I should be able to use the app when offline  
-so that I can use the app without a connection to the internet.
-
-As a user,  
-I should be able to add an app shortcut to the home screen  
-so that I can access the app with ease.
-
-As a user,  
-I should be able to display charts visualizing event details  
-so that I can easily understand the details of an event.
-
-Given-When-Then (Gherkin)
 
 Feature: Filter events by city
 
