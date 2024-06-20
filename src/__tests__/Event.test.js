@@ -6,8 +6,21 @@ describe("<Event /> component", () => {
   let eventComponent;
   beforeEach(() => {
     eventComponent = render(<Event event={mockData[0]} />);
-  }) 
+  });
   test("renders summary", () => {
     expect(eventComponent.queryByText(mockData[0].summary)).toBeInTheDocument();
+  });
+  test("renders location", () => {
+    expect(
+      eventComponent.queryByText(mockData[0].location)
+    ).toBeInTheDocument();
+  });
+  test("renders created", () => {
+    expect(
+      eventComponent.queryByText(mockData[0].created)
+    ).toBeInTheDocument();
+  });
+  test("renders show details", () => {
+    expect(eventComponent.queryByText("Show details")).toBeInTheDocument();
   });
 });
