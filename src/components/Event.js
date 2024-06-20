@@ -7,7 +7,7 @@ const Event = ({ event }) => {
       <p>{event.summary}</p>
       <p>{event.location}</p>
       <p>{event.created}</p>
-      <button>{showDetails ? "Hide Details" : "Show details"}</button>
+      <button onClick={() => {setShowDetails(!showDetails)}}>{showDetails ? "Hide Details" : "Show details"}</button>
       {showDetails ? <div>{event.Description}</div> : null}
     </div>
   );
