@@ -24,9 +24,9 @@ describe("<Event /> component", () => {
   test("renders show details", () => {
     expect(eventComponent.queryByText("Show details")).toBeInTheDocument();
   });
-  // test("when a user clicks", () => {
-  //   userEvent.click(eventComponent.queryByText("Show details"))
-  //   expect(eventComponent.queryByText(mockData[0].description)).not.toBeInTheDocument();
+  test("when a user clicks", () => {
+    userEvent.click(eventComponent.queryByText("Show details"))
+    expect(eventComponent.queryByText(mockData[0].description)).not.toBeInTheDocument();
     
-  // });
+  });
 });
