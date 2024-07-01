@@ -31,20 +31,18 @@ export const getEvents = async () => {
   }
 
   const token = await getAccessToken();
-
-  if (token) {
-    removeQuery();
-    const url =
-      "https://xon9m739d9.execute-api.eu-central-1.amazonaws.com/dev/api/get-events" +
-      "/" +
-      token;
-    const response = await fetch(url);
-    const result = await response.json();
-    if (result) {
-      localStorage.setItem("lastEvents", JSON.stringify(result.events));
-      return result.events;
-    } else return null;
-  }
+//xon9m739d9.execute-api.eu-central-1.amazonaws.com/dev/api/token/4%2F0ATx3LY7IKqsMLZvp-EnrPYV5dEfQAcbrmRlG_vAxVJUjf7-GmWJ4_GoB_XBs6430TRAnxA
+https: if (token) {
+  removeQuery();
+  const url =
+    "https://xon9m739d9.execute-api.eu-central-1.amazonaws.com/dev/api/token/" + token;
+  const response = await fetch(url);
+  const result = await response.json();
+  if (result) {
+    localStorage.setItem("lastEvents", JSON.stringify(result.events));
+    return result.events;
+  } else return null;
+}
 };
 
 const removeQuery = () => {
