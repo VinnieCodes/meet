@@ -29,7 +29,6 @@ module.exports.getAuthURL = async () => {
     statusCode: 200,
     headers: {
       "Access-Control-Allow-Origin": "*",
-      "Access-Control-Expose-Headers": "https://vinniecodes.github.io/meet/",
       "Access-Control-Allow-Credentials": true,
     },
     body: JSON.stringify({
@@ -61,7 +60,6 @@ module.exports.getAccessToken = async (event) => {
         statusCode: 200,
         headers: {
           "Access-Control-Allow-Origin": "*",
-          "Access-Control-Expose-Headers": "https://vinniecodes.github.io/meet/",
           "Access-Control-Allow-Credentials": true,
         },
         body: JSON.stringify(results),
@@ -104,8 +102,6 @@ oAuth2Client.setCredentials({access_token})
         statusCode: 200,
         headers: {
           "Access-Control-Allow-Origin": "*",
-          "Access-Control-Expose-Headers":
-            "https://vinniecodes.github.io/meet/",
           "Access-Control-Allow-Credentials": true,
         },
         body: JSON.stringify({ events: results.data.items }),
