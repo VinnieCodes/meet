@@ -1,3 +1,4 @@
+import moment from "moment";
 import { useState } from "react";
 
 const Event = ({ event }) => {
@@ -7,7 +8,7 @@ const Event = ({ event }) => {
     <li className="event">
       <h2>{event && event.summary}</h2>
       <p>{event && event.location}</p>
-      <p>{event && event.created}</p>
+      <p>Created: {event && moment(event.created).format("MMMM Do YYYY")}</p>
       {showDetails ? (
         <p className="details">{event && event.description}</p>
       ) : null}
